@@ -1,0 +1,72 @@
+<!-- link of fontawesome =  https://fontawesome.com/v4/cheatsheet/ 
+you will need fontawesome kit code 
+i.e =  <script
+      src="https://kit.fontawesome.com/3775ad34f5.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/3775ad34f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(24, 2, 44);
+        width: 100vw;
+        height: 100vh;
+        /* background-color: #f8e7af; */
+        display: grid;
+        place-items: center;
+      }
+      .mainheading {
+        color: whitesmoke;
+        font-size: 70px;
+      }
+      #temp {
+        font-size: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="mainheading">
+      I am Thermometer <span id="temp" class="fa"></span>
+    </h1>
+
+    <script>
+      const tempload = () => {
+        let temp = document.getElementById("temp");
+        temp.innerHTML = "&#xf2cb;";
+        temp.style.color = "white";
+
+        setTimeout(() => {
+          temp.innerHTML = "&#xf2ca;";
+          temp.style.color = "#f8b627";
+        }, 1000);
+
+        setTimeout(() => {
+          temp.innerHTML = "&#xf2c9;";
+        }, 2000);
+
+        setTimeout(() => {
+          temp.innerHTML = "&#xf2c8;";
+        }, 3000);
+        setTimeout(() => {
+          temp.innerHTML = "&#xf2c7;";
+          temp.style.color = "#d63031";
+        }, 4000);
+      };
+
+      tempload();
+      setInterval(tempload, 5000);
+    </script>
+  </body>
+</html>
